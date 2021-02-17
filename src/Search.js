@@ -4,7 +4,7 @@ import "./Search.js";
 export default function Search() {
   return (
     <div className="Search">
-      <form id="search-form" className="searchForm" class="col-sm">
+      <form id="search-form" className="searchForm" className="col-sm">
         <input
           type="text"
           id="city-input"
@@ -17,7 +17,7 @@ export default function Search() {
           type="submit"
           value="search"
           autofocus="on"
-          class="btn btn-primary"
+          className="btn btn-primary"
         />
         <input
           type="submit"
@@ -25,7 +25,7 @@ export default function Search() {
           autofocus="on"
           id="current-location"
           className="pinpoint"
-          class="btn btn-success"
+          className="btn btn-success"
         />
       </form>
     </div>
