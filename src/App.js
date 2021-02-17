@@ -12,7 +12,9 @@ export default function App() {
     <div className="App" className="wrapper">
       < Search />
       <Weather /> <City />
-      
     </div>
+    
+    
+    
   );
 }

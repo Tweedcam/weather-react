@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    < a href="https://github.com/Tweedcam/weather-react" className="git">Open Source Code</a><p className="creator">By Andrea👩‍💻</p>
   </React.StrictMode>,
   document.getElementById('root')
 );
