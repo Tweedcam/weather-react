@@ -31,3 +31,29 @@
     font-family: "Antic Slab", serif;
   }
   
+  .searchForm {
+    display: block;
+    padding: 30px;
+  }
+
+  .city{
+    text-align: right;
+  }
+  
+  .dateTime {
+    text-align: right;
+    display: block;
+    padding: 10px;
+    color: #4f5258;
+    font-family: "Antic Slab", serif;
+  }
+
+  
+  .searchTemp {
+    text-align: right;
+    display: block;
+    color: #006ec5;
+    padding: 5px;
+    font-size: 30px;
+  }
+  
