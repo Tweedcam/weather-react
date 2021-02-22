@@ -3,10 +3,47 @@
     text-align: center;
   }
   
+  .wrapper {
+    padding: 10px;
+    max-width: 700px;
+    margin: 50px auto;
+    background-image: linear-gradient(
+      -225deg,
+      #7085b6 0%,
+      #87a7d9 50%,
+      #def3f8 100%
+    );
+    border: 10px;
+    border-color: grey;
+    border-radius: 20px;
+  }
+
+  
   .git{
     position: relative;
     display:block;
     
   }
 
+  .searchForm {
+    display: block;
+    padding: 30px;
+  }
   
+  .dateTime {
+    text-align: right;
+    display: block;
+    padding: 10px;
+    color: #4f5258;
+    font-family: "Antic Slab", serif;
+  }
+  
+  .searchTemp {
+    text-align: right;
+    display: block;
+    color: #006ec5;
+    padding: 5px;
+    font-size: 30px;
+  }
+  
+ 
