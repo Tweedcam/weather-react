@@ -24,7 +24,7 @@ export default function Weather() {
 
 
       <div className="weather">
-      <i className="icon"className="fas fa-cloud fa-3x"></i>
+      <img src="clouds.jpg"  className="weatherIcon"/>
       <ul className="summary">
       <li className="description"> Cloudy</li>
       <li className="feels"> feels like 2°C </li>
