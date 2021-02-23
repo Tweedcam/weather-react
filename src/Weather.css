@@ -4,7 +4,7 @@
     padding: 5px;
   }
   
-  .summary {
+  .description {
     text-align: left;
     display: block;
     padding: 5px;
@@ -31,6 +31,18 @@
     font-family: "Antic Slab", serif;
   }
   
+.wind{
+  text-align: left;
+  display: block;
+  padding: 5px;
+  font-size: 15px;
+  color: #4f5258;
+  font-family: "Antic Slab", serif;
+
+
+}
+
+
   .searchForm {
     display: block;
     padding: 30px;

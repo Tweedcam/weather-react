@@ -8,7 +8,7 @@ export default function Weather() {
       <form>
         <div className="row">
           <div className="col-6">
-        <input type="search" placeholder="Enter a city" className="form-control"/>
+        <input type="search" placeholder="Enter a city" className="form-control" autoFocus="on"/>
         </div>
         <div className="col-3">
         <input type="submit" value="search" className="btn btn-primary"/>
@@ -25,9 +25,15 @@ export default function Weather() {
 
       <div className="weather">
       <i className="fas fa-cloud fa-3x"></i>
-      <span className="summary">Cloudy</span>
-      <span className="feels">feels like 2°C</span>
-      <span className="humidity">Humidity:40%</span>
+      <ul className="summary">
+      <li className="description"> Cloudy</li>
+      <li className="feels"> feels like 2°C </li>
+      <li className="humidity"> Humidity:40% </li>
+      <li className="wind">Wind Speed:6 km/ph</li>
+
+      </ul>
+
+
     </div>
 
 
