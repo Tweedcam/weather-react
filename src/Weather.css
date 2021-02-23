@@ -4,7 +4,7 @@
     padding: 5px;
   }
   
-  .description {
+  .description, .feels, .humidity, .wind {
     text-align: left;
     display: block;
     padding: 5px;
@@ -13,36 +13,7 @@
     font-family: "Antic Slab", serif;
   }
   
-  .feels {
-    text-align: left;
-    display: block;
-    padding: 5px;
-    font-size: 15px;
-    color: #4f5258;
-    font-family: "Antic Slab", serif;
-  }
   
-  .humidity {
-    text-align: left;
-    display: block;
-    padding: 5px;
-    font-size: 15px;
-    color: #4f5258;
-    font-family: "Antic Slab", serif;
-  }
-  
-.wind{
-  text-align: left;
-  display: block;
-  padding: 5px;
-  font-size: 15px;
-  color: #4f5258;
-  font-family: "Antic Slab", serif;
-
-
-}
-
-
   .searchForm {
     display: block;
     padding: 30px;
