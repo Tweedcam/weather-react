@@ -3,6 +3,10 @@
     top: 50px;
     padding: 5px;
   }
+
+  .fas fa-cloud fa-3x{
+    color: red;
+  }
   
   .description, .feels, .humidity, .wind {
     text-align: left;
