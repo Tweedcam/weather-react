@@ -5,8 +5,9 @@ import "./Weather.css"
 
 
 export default function Weather() {
+  let city="London"
   const apiKey=`173979aec676620809233769fcdd48b5`
-  const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={apiKey}`
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   
   return (
     <div className="search">
@@ -25,9 +26,6 @@ export default function Weather() {
       <h1 className="city"> London</h1>
       <span className="searchTemp">5°C</span>
   
-
-
-
       <div className="weather">
       <img src="clouds.jpg"  className="weatherIcon"/>
       <ul className="summary">
@@ -40,11 +38,6 @@ export default function Weather() {
 
 
     </div>
-
-
-
-
-
     </div>
 
     
