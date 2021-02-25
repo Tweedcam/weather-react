@@ -5,9 +5,16 @@ import "./Weather.css"
 
 
 export default function Weather() {
+  
+  
+  function handleResponse(response){
+    console.log(response.data);
+  }
+  
   let city="London"
   const apiKey=`173979aec676620809233769fcdd48b5`
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  axios.get(apiUrl).then(handleResponse)
   
   return (
     <div className="search">
