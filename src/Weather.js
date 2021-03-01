@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import axios from "axios";
 import "./Weather.js";
 import "./Weather.css";
-import "./FormattedDate";
 import FormattedDate from "./FormattedDate";
 
 
@@ -40,9 +39,15 @@ if (weatherData.ready){
         </div>
       </form>
       
-      <FormattedDate date={weatherData.date}/>
+     
       <h1 className="city">{weatherData.name}</h1>
-      <span className="searchTemp">{Math.round(weatherData.temperature)}°C</span>
+      <ul>
+        <li className="dateTime">
+          <FormattedDate date={weatherData.date} />
+          </li>
+      <li className="searchTemp">{Math.round(weatherData.temperature)}°C</li>
+      </ul>
+     
   
       <div className="weather">
       <img src="clouds.jpg"  className="weatherIcon"/>
