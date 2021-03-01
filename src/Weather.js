@@ -5,15 +5,26 @@ import "./Weather.css"
 
 
 export default function Weather() {
-  const[ready, setReady]=useState=(false);
-  const[temperature, setTemperature]=useState(null);
+  const[ready, setReady]=useState(false);
+  const[weatherData, setWeatherData]=useState({});
   
   
   function handleResponse(response){
     console.log(response.data);
+    setReady(true);
+    setWeatherData({
+      city: response.data.main.name,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      feelsLike: response.data.main.feels_like,
+      humidity: response.data.main.humidity,
+      description: response.data.weather.description,
+    }
+
+    );
   }
 
-if (result){
+if (ready){
   return (
     <div className="search">
       <form>
@@ -28,16 +39,16 @@ if (result){
       </form>
       
       <h2 className="dateTime">15:14</h2>
-      <h1 className="city"> London</h1>
-      <span className="searchTemp">5°C</span>
+      <h1 className="city">{weatherData.city}</h1>
+      <span className="searchTemp">{Math.round(weatherData.temperature)}°C</span>
   
       <div className="weather">
       <img src="clouds.jpg"  className="weatherIcon"/>
       <ul className="summary">
-      <li className="description"> Cloudy</li>
-      <li className="feels"> feels like 2°C </li>
-      <li className="humidity"> Humidity:40% </li>
-      <li className="wind">Wind Speed:6 km/ph</li>
+      <li className="description">{weatherData.description}</li>
+      <li className="feels"> feels like{Math.round(weatherData.feelsLike)}°C </li>
+      <li className="humidity">{Math.round(weatherData.humidity)} % </li>
+      <li className="wind">{Math.round(weatherData.wind)} km/ph</li>
 
       </ul>
 
@@ -50,7 +61,7 @@ if (result){
 } else{
   let city="London"
   const apiKey=`173979aec676620809233769fcdd48b5`
-  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse)
   
 return "Loading Results...."
