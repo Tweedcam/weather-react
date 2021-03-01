@@ -1,21 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import "./Weather.js";
 import "./Weather.css"
 
 
 export default function Weather() {
+  const[ready, setReady]=useState=(false);
+  const[temperature, setTemperature]=useState(null);
   
   
   function handleResponse(response){
     console.log(response.data);
   }
-  
-  let city="London"
-  const apiKey=`173979aec676620809233769fcdd48b5`
-  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-  axios.get(apiUrl).then(handleResponse)
-  
+
+if (result){
   return (
     <div className="search">
       <form>
@@ -49,4 +47,22 @@ export default function Weather() {
 
     
   );
+} else{
+  let city="London"
+  const apiKey=`173979aec676620809233769fcdd48b5`
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  axios.get(apiUrl).then(handleResponse)
+  
+return "Loading Results...."
+
+
+}
+
+
+
+
+
+  
+  
+  
 }
