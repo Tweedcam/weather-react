@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import axios from "axios";
 import "./Weather.js";
-import "./Weather.css"
+import "./Weather.css";
+import "./FormattedDate";
+import FormattedDate from "./FormattedDate";
 
 
 export default function Weather() {
@@ -12,7 +14,8 @@ export default function Weather() {
     console.log(response.data);
     setWeatherData({
       ready:true,
-      city: response.data.main.name,
+      date: new Date(response.data.dt*1000),
+      name: response.data.name,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       feelsLike: response.data.main.feels_like,
@@ -37,8 +40,8 @@ if (weatherData.ready){
         </div>
       </form>
       
-      <h2 className="dateTime">15:14</h2>
-      <h1 className="city">{weatherData.city}</h1>
+      <FormattedDate date={weatherData.date}/>
+      <h1 className="city">{weatherData.name}</h1>
       <span className="searchTemp">{Math.round(weatherData.temperature)}°C</span>
   
       <div className="weather">
