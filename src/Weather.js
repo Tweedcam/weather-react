@@ -5,14 +5,13 @@ import "./Weather.css"
 
 
 export default function Weather() {
-  const[ready, setReady]=useState(false);
-  const[weatherData, setWeatherData]=useState({});
+  const[weatherData, setWeatherData]=useState({ready:false});
   
   
   function handleResponse(response){
     console.log(response.data);
-    setReady(true);
     setWeatherData({
+      ready:true,
       city: response.data.main.name,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -24,7 +23,7 @@ export default function Weather() {
     );
   }
 
-if (ready){
+if (weatherData.ready){
   return (
     <div className="search">
       <form>
