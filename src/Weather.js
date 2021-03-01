@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import axios from "axios";
 import "./Weather.js";
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+
+import WeatherInfo from "./WeatherInfo";
 
 
 export default function Weather() {
@@ -25,42 +26,36 @@ export default function Weather() {
     );
   }
 
+  function handleSubmit(event){
+    event.preventDefault();
+
+  }
+
+
+
+
+  function handleCity(event){
+
+  }
+
+
+
+
 if (weatherData.ready){
   return (
     <div className="search">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-6">
-        <input type="search" placeholder="Enter a city" className="form-control" autoFocus="on"/>
+        <input type="search" placeholder="Enter a city" className="form-control" autoFocus="on" onChange={handleCity}/>
         </div>
         <div className="col-3">
         <input type="submit" value="search" className="btn btn-primary"/>
         </div>
         </div>
       </form>
+      <WeatherInfo data={weatherData} />
       
-     
-      <h1 className="city">{weatherData.name}</h1>
-      <ul>
-        <li className="dateTime">
-          <FormattedDate date={weatherData.date} />
-          </li>
-      <li className="searchTemp">{Math.round(weatherData.temperature)}°C</li>
-      </ul>
-     
-  
-      <div className="weather">
-      <img src="clouds.jpg"  className="weatherIcon"/>
-      <ul className="summary">
-      <li className="description">{weatherData.description}</li>
-      <li className="feels"> feels like{Math.round(weatherData.feelsLike)}°C </li>
-      <li className="humidity">{Math.round(weatherData.humidity)} % </li>
-      <li className="wind">{Math.round(weatherData.wind)} km/ph</li>
-
-      </ul>
-
-
-    </div>
     </div>
 
     
