@@ -16,10 +16,12 @@ export default function TemperatureConversion(props){
 
 if (unit === "celsius"){
     return(
-        <div className="searchTemp">         
-        <span >{Math.round(props.celsius)}{""} °C | 
-        <a href={"#"}className="units"onClick={convertFahrenheit}>°F </a> 
-        </span>          
+        <div >         
+        <span className="searchTemp">{Math.round(props.celsius)}{""}</span>
+        <span className="units"> °C | 
+        <a href={"#"}onClick={convertFahrenheit}>°F </a> 
+        </span> 
+                
         </div>
         
     );
@@ -27,10 +29,12 @@ if (unit === "celsius"){
 
 else {
 return(
-<div className="searchTemp">         
-        <span >{Math.round(fahrenheit)}{""} <a href={"#"}className="units"onClick={convertCelsius}>°C</a>  | 
+    <div >         
+    <span className="searchTemp">{Math.round(fahrenheit)}{""} </span> 
+       <span className="units"> 
+         <a href={"#"}onClick={convertCelsius}>°C</a>  | 
         °F 
-        </span>          
+        </span> 
         </div>
 );
 
