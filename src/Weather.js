@@ -19,7 +19,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       feelsLike: response.data.main.feels_like,
       humidity: response.data.main.humidity,
-      description: response.data.weather.description,
+      description: response.data.weather[0].description,
     }
 
     );

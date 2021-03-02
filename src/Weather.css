@@ -1,6 +1,5 @@
 .weatherIcon {
-    position: relative;
-    padding: 5px;
+  
   }
 
 
@@ -10,7 +9,7 @@
     text-align: left;
     display: block;
     padding: 5px;
-    font-size: 10px;
+    font-size: 20px;
     color: #4f5258;
     font-family: "Antic Slab", serif;
     list-style: none;
