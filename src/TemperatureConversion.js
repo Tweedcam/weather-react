@@ -19,7 +19,7 @@ if (unit === "celsius"){
         <div >   
             <span className="searchTemp">{Math.round(props.celsius)}{""}
             °C | 
-        <a href={"#"}onClick={convertFahrenheit} >°F </a> 
+        <a href={"#"}onClick={convertFahrenheit}>°F </a> 
             </span>       
         </div>
         

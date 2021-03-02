@@ -22,13 +22,17 @@
     font-size: 30px;
   }
 
+  .a:hover{
+    text-decoration: none;
 
-  .units{
+  }
+
+  .unit{
     text-align: right;
     display: block;
     color: #006ec5;
     padding: 0px;
-    font-size: 15px;
+  
 
 
   }
