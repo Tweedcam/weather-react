@@ -1,6 +1,4 @@
-.weatherIcon {
-  
-  }
+
 
 
   
@@ -14,7 +12,26 @@
     font-family: "Antic Slab", serif;
     list-style: none;
   }
-  
+
+
+  .searchTemp {
+    text-align: right;
+    display: block;
+    color: #006ec5;
+    padding: 15px;
+    font-size: 30px;
+  }
+
+
+  .units{
+    text-align: right;
+    display: block;
+    color: #006ec5;
+    padding: 0px;
+    font-size: 15px;
+
+
+  }
   
   .searchForm {
     display: block;
@@ -35,11 +52,5 @@
   }
 
   
-  .searchTemp {
-    text-align: right;
-    display: block;
-    color: #006ec5;
-    padding: 5px;
-    font-size: 30px;
-  }
+  
   

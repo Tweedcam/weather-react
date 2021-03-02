@@ -1,19 +1,17 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import TemperatureConversion from "./TemperatureConversion";
 
 export default function WeatherInfo(props){
 
 return(
 < div className="WeatherInfo" >      
 <h1 className="city">{props.data.name}</h1>
-    <ul>
-      <li className="dateTime">
+      <span className="dateTime">
         <FormattedDate date={props.data.date} />
-        </li>
-    <li className="searchTemp">{Math.round(props.data.temperature)}°C</li>
-    </ul>
-   
-
+        </span>
+        <TemperatureConversion celsius={props.data.temperature} />
+    
     <div className="weather">
     <img src={props.data.iconUrl} alt={props.data.description} className="weatherIcon"/>
     <ul className="summary">
