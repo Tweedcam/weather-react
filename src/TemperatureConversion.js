@@ -7,11 +7,14 @@ export default function TemperatureConversion(props){
     function convertFahrenheit(event){
         event.preventDefault();
         setUnit("fahrenheit");
+       
     }
 
     function convertCelsius(event){
         event.preventDefault();
         setUnit("celsius");
+        
+
     }
 
 if (unit === "celsius"){
@@ -19,7 +22,7 @@ if (unit === "celsius"){
         <div >   
             <span className="searchTemp">{Math.round(props.celsius)}{""}
             °C | 
-        <a href={"#"}onClick={convertFahrenheit}>°F </a> 
+        <a href={"#"} id="fahrenheit" className="active" onClick={convertFahrenheit}>°F </a> 
             </span>       
         </div>
         
@@ -30,7 +33,7 @@ else {
 return(
     <div >  
     <span className="searchTemp">{Math.round(fahrenheit)}{""} 
-    <a href={"#"}onClick={convertCelsius}>°C</a>  | 
+    <a href={"#"} id="celsius" className="active"onClick={convertCelsius}>°C</a>  | 
         °F 
     </span>
         </div>
