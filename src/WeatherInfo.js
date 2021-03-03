@@ -12,9 +12,9 @@ return(
     <img src={props.data.iconUrl} alt={props.data.description} className="weatherIcon"/>
     <ul className="summary">
     <li className="description"> {props.data.description} </li>
-    <li className="feels"> feels like{Math.round(props.data.feelsLike)}°C </li>
-    <li className="humidity">{Math.round(props.data.humidity)} % </li>
-    <li className="wind">{Math.round(props.data.wind)} km/ph</li>
+    <li className="feels"> Feels Like: {Math.round(props.data.feelsLike)}°C </li>
+    <li className="humidity">humidity: {Math.round(props.data.humidity)} % </li>
+    <li className="wind">Wind:{Math.round(props.data.wind)} km/ph</li>
     </ul>
   </div>
 

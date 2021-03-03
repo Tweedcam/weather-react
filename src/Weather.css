@@ -7,10 +7,11 @@
     text-align: left;
     display: block;
     padding: 5px;
-    font-size: 20px;
+    font-size: 15px;
     color: #4f5258;
     font-family: "Antic Slab", serif;
     list-style: none;
+    text-transform: capitalize;
   }
 
 
@@ -18,7 +19,7 @@
     text-align: right;
     display: block;
     color: #006ec5;
-    padding: 15px;
+    padding: 20px;
     font-size: 30px;
   }
 
@@ -47,6 +48,7 @@
 
   .city{
     text-align: right;
+    padding: 20px;
   }
   
   .dateTime {
@@ -58,6 +60,4 @@
     list-style: none;
   }
 
-  
-  
   
