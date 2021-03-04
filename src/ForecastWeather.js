@@ -14,10 +14,10 @@ export default function ForecastWeather(props){
     if(ready){
         console.log(forecast);
         return(
-            <div>
+            <div className="forecastWeather row">
                 11:00
                 <img src={props.icon} />          
-                {Math.round(forecast.hourly.[0].temp)}°C
+               <span>{Math.round(forecast.hourly[0].temp)}°C </span> 
             </div>
             
         );
