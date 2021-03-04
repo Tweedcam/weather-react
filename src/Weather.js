@@ -11,7 +11,6 @@ export default function Weather(props) {
   const [city, setCity]=useState(props.defaultCity);
   
   function handleResponse(response){
-    console.log(response.data)
     setWeatherData({
       ready:true,
       iconUrl:`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,

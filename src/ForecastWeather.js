@@ -3,14 +3,22 @@ import axios from "axios";
 
 export default function ForecastWeather(props){
     const[ready,setReady]=useState(false);
+    const[forecast,setForecast]=useState(null);
 
     function handleForecastRequest(response){
-        console.log(response.data);
+        setForecast(response.data);
+        setReady(true);
+
     }
 
     if(ready){
-        return "ready";
-
+        console.log(forecast);
+        return(
+            <div>          
+                {Math.round(forecast.hourly.[0].temp)}°C
+            </div>
+            
+        );
     }
     else{
      let apiKey=`173979aec676620809233769fcdd48b5`;
@@ -20,7 +28,7 @@ export default function ForecastWeather(props){
     
     axios.get(url).then(handleForecastRequest);
     
-    return("forecast");
+    return null;
 
 
 
