@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.js";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import ForecastWeather from "./ForecastWeather";
 
 
 export default function Weather(props) {
@@ -59,6 +60,7 @@ if (weatherData.ready){
         </div>
       </form>
       <WeatherInfo data={weatherData} />
+      <ForecastWeather />
       
     </div>
 
