@@ -11,9 +11,12 @@ export default function Weather(props) {
   const [city, setCity]=useState(props.defaultCity);
   
   function handleResponse(response){
+    console.log(response.data)
     setWeatherData({
       ready:true,
       iconUrl:`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      lon:response.data.coord.lon,
+      lat:response.data.coord.lat,
       date: new Date(response.data.dt*1000),
       name: response.data.name,
       temperature: response.data.main.temp,
@@ -60,7 +63,7 @@ if (weatherData.ready){
         </div>
       </form>
       <WeatherInfo data={weatherData} />
-      <ForecastWeather city={weatherData.name}/>
+      <ForecastWeather city={weatherData.name} lon={weatherData.lon} lat={weatherData.lat}/>
       
     </div>
 
