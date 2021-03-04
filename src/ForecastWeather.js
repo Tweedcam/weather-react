@@ -14,7 +14,9 @@ export default function ForecastWeather(props){
     if(ready){
         console.log(forecast);
         return(
-            <div>          
+            <div>
+                11:00
+                <img src={props.icon} />          
                 {Math.round(forecast.hourly.[0].temp)}°C
             </div>
             
@@ -30,14 +32,7 @@ export default function ForecastWeather(props){
     
     return null;
 
-
-
-
     }
-
-    
-
-
 }
 
 
