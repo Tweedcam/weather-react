@@ -1,6 +1,7 @@
-
-
-
+  img.weatherIcon{
+    size: 200px;
+  }
+  
   
   
   .description, .feels, .humidity, .wind {
