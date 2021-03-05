@@ -1,4 +1,5 @@
 import React from "react";
+import ForecastStyle from "./ForecastStyle.css";
 
 export default function ForecastInfo(props){
     let icon=props.data.weather[0].icon;
@@ -22,7 +23,7 @@ export default function ForecastInfo(props){
     return(
         <div className="forecastInfo" className="col-2">
             {hours()}
-        <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`}/>
+        <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} className="forecastIcon"/>
                 {temperature()}
                 </div>
     );
