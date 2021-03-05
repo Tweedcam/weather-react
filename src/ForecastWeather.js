@@ -13,9 +13,10 @@ export default function ForecastWeather(props){
     }
 
     if(ready){
+        console.log(forecast);
         return(
             <div className="forecastWeather row" >
-                    <ForecastInfo data={forecast.hourly[0]} />
+                    <ForecastInfo data={forecast.hourly[0]}/>
             </div>
             
         );
