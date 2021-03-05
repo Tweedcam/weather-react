@@ -1,7 +1,13 @@
+.col-2 {
+    text-align: center;
+}
+
+
 .forecastInfo{
     font-family:"Antic Slab", serif;
     display:inline;
     text-align:center;
+    color: chartreuse;
     
     
 }
@@ -9,6 +15,7 @@
 .forecastIcon {
     display:inline;
     margin: auto;
+    color: chartreuse;
     
 
 }

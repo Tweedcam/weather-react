@@ -1,5 +1,5 @@
 import React from "react";
-import ForecastStyle from "./ForecastStyle.css";
+import "./ForecastStyle.css"
 
 export default function ForecastInfo(props){
     let icon=props.data.weather[0].icon;

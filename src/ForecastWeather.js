@@ -1,7 +1,7 @@
 import React,{useState}from "react";
 import axios from "axios";
 import ForecastInfo from "./ForecastInfo";
-import ForecastStyle from "./ForecastStyle.css";
+import "./ForecastStyle.css"
 
 
 export default function ForecastWeather(props){
@@ -18,6 +18,11 @@ export default function ForecastWeather(props){
         return(
             <div className="row" >
                     <ForecastInfo data={forecast.hourly[0]}/>
+                    <ForecastInfo data={forecast.hourly[1]}/>
+                    <ForecastInfo data={forecast.hourly[2]}/>
+                    <ForecastInfo data={forecast.hourly[3]}/>
+                    <ForecastInfo data={forecast.hourly[4]}/>
+                    <ForecastInfo data={forecast.hourly[5]}/>
                     
             </div>
             
