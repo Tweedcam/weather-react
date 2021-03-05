@@ -12,12 +12,13 @@ export default function ForecastWeather(props){
     }
 
     if(ready){
-        console.log(forecast);
         return(
-            <div className="forecastWeather row">
-                11:00
-                <img src={props.icon} />          
-               <span>{Math.round(forecast.hourly[0].temp)}°C </span> 
+            <div className="forecastWeather row" >
+                <div className="col">
+                {new Date(forecast.hourly[0].dt*1000).getHours()}:00
+                <img src={props.icon} className="forecastIcon" />
+                {Math.round(forecast.hourly[0].temp)}°C 
+                </div>
             </div>
             
         );
