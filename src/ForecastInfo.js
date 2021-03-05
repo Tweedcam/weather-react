@@ -20,7 +20,7 @@ export default function ForecastInfo(props){
     }
 
     return(
-        <div className="forecastInfo col">
+        <div className="forecastInfo" className="col-2">
             {hours()}
         <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`}/>
                 {temperature()}
