@@ -9,13 +9,16 @@ export default function ForecastWeather(props){
     const[forecast,setForecast]=useState(null);
 
     function handleForecastRequest(response){
+        console.log(forecast);
         setForecast(response.data);
         setReady(true);
 
     }
 
-    if(ready){
+    if(ready && props.lat === forecast.data.lat ){
         return(
+            
+
             <div className="row" >
                     <ForecastInfo data={forecast.hourly[0]}/>
                     <ForecastInfo data={forecast.hourly[1]}/>
