@@ -6,7 +6,7 @@ import "./ForecastStyle.css"
 
 export default function ForecastWeather(props){
     const[ready,setReady]=useState(false);
-    const[forecast,setForecast]=useState(null);
+    const[forecast,setForecast]=useState("");
 
     function handleForecastRequest(response){
         console.log(forecast);
@@ -15,7 +15,7 @@ export default function ForecastWeather(props){
 
     }
 
-    if(ready && props.lat === forecast.data.lat ){
+    if(ready === forecast){
         return(
             
 
