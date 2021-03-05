@@ -62,7 +62,7 @@ if (weatherData.ready){
         </div>
       </form>
       <WeatherInfo data={weatherData} />
-      <ForecastWeather city={weatherData.name} lon={weatherData.lon} lat={weatherData.lat} icon={weatherData.iconUrl}/>
+      <ForecastWeather city={weatherData.name} lon={weatherData.lon} lat={weatherData.lat} icon={weatherData.iconUrl} />
       
     </div>
 

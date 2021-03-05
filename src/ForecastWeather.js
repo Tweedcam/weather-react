@@ -1,5 +1,6 @@
 import React,{useState}from "react";
 import axios from "axios";
+import ForecastInfo from "./ForecastInfo";
 
 export default function ForecastWeather(props){
     const[ready,setReady]=useState(false);
@@ -14,11 +15,7 @@ export default function ForecastWeather(props){
     if(ready){
         return(
             <div className="forecastWeather row" >
-                <div className="col">
-                {new Date(forecast.hourly[0].dt*1000).getHours()}:00
-                <img src={props.icon} className="forecastIcon" />
-                {Math.round(forecast.hourly[0].temp)}°C 
-                </div>
+                    <ForecastInfo data={forecast.hourly[0]} />
             </div>
             
         );
