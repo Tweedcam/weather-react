@@ -15,7 +15,7 @@ export default function ForecastWeather(props){
 
     }
 
-    if(ready === forecast){
+    if(ready && props.lat === forecast.lat && props.lon === forecast.lon){
         return(
             
 
