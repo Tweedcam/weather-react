@@ -9,7 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <div className="git">
-    < a href="https://github.com/Tweedcam/weather-react" >Open Source Code By Andrea </a>
+    < a href="https://github.com/Tweedcam/weather-react" >Open Source Code </a>By Andrea
     </div>
     
   </React.StrictMode>,
